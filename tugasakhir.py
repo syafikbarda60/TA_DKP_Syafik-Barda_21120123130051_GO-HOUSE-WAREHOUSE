@@ -53,20 +53,18 @@ class WarehouseManagement:
         self.img_label = tk.Label(master, image=self.img, bg='white')
         self.img_label.grid(row=0, column=0, columnspan=2, padx=5, pady=5)
         self.img_label.place_configure(x = -50, y = 0)
-
-        
     
-        self.name_label = tk.Label(master, text="Item Name:")
+        self.name_label = tk.Label(master, text="Item Name:", bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
         self.name_label.grid(row=0, column=0, padx=5, pady=5)
         self.name_entry = tk.Entry(master)
         self.name_entry.grid(row=0, column=1, padx=5, pady=5)
 
-        self.quantity_label = tk.Label(master, text="Quantity:")
+        self.quantity_label = tk.Label(master, text="Quantity:", bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
         self.quantity_label.grid(row=1, column=0, padx=5, pady=5)
         self.quantity_entry = tk.Entry(master)
         self.quantity_entry.grid(row=1, column=1, padx=5, pady=5)
 
-        self.add_button = tk.Button(master, text="Add Item", command=self.add_item)
+        self.add_button = tk.Button(master, text="Add Item", command=self.add_item, bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
         self.add_button.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
 
         
@@ -75,13 +73,13 @@ class WarehouseManagement:
 
         self.load_items()
 
-        self.edit_button = tk.Button(master, text="Edit Item", command=self.edit_item)
+        self.edit_button = tk.Button(master, text="Edit Item", command=self.edit_item,  bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
         self.edit_button.grid(row=4, column=0, padx=5, pady=5)
 
-        self.delete_button = tk.Button(master, text="Delete Item", command=self.delete_item)
+        self.delete_button = tk.Button(master, text="Delete Item", command=self.delete_item,  bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
         self.delete_button.grid(row=4, column=1, padx=5, pady=5)
         
-        self.back_button = tk.Button(master, text="Back", command=self.back_to_main)
+        self.back_button = tk.Button(master, text="Back", command=self.back_to_main,  bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
         self.back_button.grid(row=5, column=0, columnspan=2, padx=5, pady=5)
     #function
     def load_items(self):
@@ -160,10 +158,10 @@ class SellItems:
 
         self.load_items()
 
-        self.sell_button = tk.Button(master, text="Sell Item", command=self.sell_item)
+        self.sell_button = tk.Button(master, text="Sell Item", command=self.sell_item, bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
         self.sell_button.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
         
-        self.back_button = tk.Button(master, text="Back", command=self.back_to_main)
+        self.back_button = tk.Button(master, text="Back", command=self.back_to_main, bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
         self.back_button.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
 
     def load_items(self):
@@ -223,7 +221,7 @@ class SoldItems:
 
         self.load_sold_items()
 
-        self.back_button = tk.Button(master, text="Back", command=self.back_to_main)
+        self.back_button = tk.Button(master, text="Back", command=self.back_to_main, bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
         self.back_button.grid(row=1, column=0, columnspan=2, padx=5, pady=5)
     
 
@@ -255,19 +253,19 @@ class MainScreen:
         self.img_label.place_configure(x = -50, y = 0)
 
    
-        self.add_edit_button = tk.Button(master, text="Add/Edit Items", command=self.open_add_edit_window, bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
+        self.add_edit_button = tk.Button(master, text="Add/Edit Items", command=self.open_add_edit_window, bg="#FF5733", fg="#fdf5e6", font=("Palatino", 15, "bold"))
         self.add_edit_button.pack(pady=20)
         self.add_edit_button.place_configure(x = 100, y = 50)
 
-        self.sell_button = tk.Button(master, text="Sell Items", command=self.open_sell_window, bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
+        self.sell_button = tk.Button(master, text="Sell Items", command=self.open_sell_window, bg="#FF5733", fg="#fdf5e6", font=("Palatino", 15, "bold"))
         self.sell_button.pack(pady=20)
         self.sell_button.place_configure(x = 425, y = 50)
 
-        self.view_sold_button = tk.Button(master, text="View Sold Items", command=self.open_sold_items_window, bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
+        self.view_sold_button = tk.Button(master, text="View Sold Items", command=self.open_sold_items_window, bg="#FF5733", fg="#fdf5e6", font=("Palatino", 15, "bold"))
         self.view_sold_button.pack(pady=20)
         self.view_sold_button.place_configure(x = 715, y = 50)
         
-        self.exit_button = tk.Button(master, text="Exit", command=self.exit_program, bg="#FF5733", fg="#fdf5e6", font=("Palatino", 12, "bold"))
+        self.exit_button = tk.Button(master, text="Exit", command=self.exit_program, bg="#FF5733", fg="#fdf5e6", font=("Palatino", 15, "bold"))
         self.exit_button.pack(pady=20)
         self.exit_button.place_configure(x = 450, y = 450)
 
@@ -320,7 +318,7 @@ class LoginScreen:
         self.img2_label.place_configure(x = 400, y = -10)
 
         
-        self.heading_label = tk.Label(master, text ="LOGIN", bg = "#ff3131", fg = "#fdf5e6", font=("Palatino", 24, "bold"))
+        self.heading_label = tk.Label(master, text ="LOGIN", bg = "#ff3131", fg = "#fdf5e6", font=("Palatino", 30, "bold"))
         self.heading_label.place_configure(x = 600, y = 80)
 
         
@@ -340,7 +338,7 @@ class LoginScreen:
         self.password_entry.place_configure(x = 550, y = 240)
         
 
-        self.login_button = tk.Button(master, text="Login", command=self.login, bg="#ff3131", fg="#fdf5e6", font=("palatino", 12, "bold"))
+        self.login_button = tk.Button(master, text="Login", command=self.login, bg="#ff3131", fg="#fdf5e6", font=("palatino", 15, "bold"))
         self.login_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
         self.login_button.place_configure(x = 630, y = 290)
 
